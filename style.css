@@ -143,3 +143,43 @@ body:not(.ready) .scroll{opacity:0}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
 }
+
+
+/* Responsive-only layout adjustments. Existing colors, typography, effects and animation design are preserved. */
+@media (max-width: 760px) {
+  html { scroll-padding-top: 64px; }
+  #hero { min-height: 540px; min-height: max(540px, 100svh); }
+  .hc { padding-left: 18px; padding-right: 18px; }
+  .hc h1 { font-size: clamp(2.5rem, 10.5vw, 6rem); white-space: normal; overflow-wrap: anywhere; }
+  .sub { max-width: 38rem; margin-left: auto; margin-right: auto; line-height: 1.8; overflow-wrap: anywhere; }
+  nav { left: 0; right: 0; top: 0; flex-direction: row; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 8px 18px; padding: calc(12px + env(safe-area-inset-top, 0px)) 16px 8px; }
+  nav a { padding: 4px 0; }
+  .scroll { bottom: 66px; }
+  .wrap { padding-left: clamp(18px, 5vw, 28px); padding-right: clamp(18px, 5vw, 28px); }
+  .row, .sk, .proj { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .proj .st { text-align: left; overflow-wrap: anywhere; }
+  .edu { grid-template-columns: minmax(0, 1fr); }
+  .ec { min-width: 0; }
+  .big, .row h2, .proj h2, .cl, .sk p { overflow-wrap: anywhere; }
+  .mqs { max-width: 100%; }
+}
+@media (max-width: 420px) {
+  nav { justify-content: center; gap: 6px 14px; padding-left: 10px; padding-right: 10px; font-size: 12px; }
+  #hero { min-height: 520px; min-height: max(520px, 100svh); }
+  .hc h1 { font-size: clamp(2.15rem, 10.5vw, 3.2rem); }
+  .tag { letter-spacing: .22em; }
+  .wrap { padding-top: 88px; }
+  .ec { padding-left: 20px; padding-right: 20px; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .wrap { padding-left: 32px; padding-right: 32px; }
+  .row { grid-template-columns: minmax(190px, 260px) minmax(0, 1fr); gap: 24px; }
+  .proj { grid-template-columns: minmax(0, 1fr) minmax(180px, 280px); gap: 24px; }
+  .edu { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ec.main { grid-column: 1 / -1; }
+}
+@media (hover: none), (pointer: coarse) {
+  body { cursor: auto; }
+  .proj:hover, .cl:hover { padding-left: 0; }
+  .sk:hover p, .row:hover h2 { transform: none; }
+}
