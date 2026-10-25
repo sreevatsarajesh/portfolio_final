@@ -209,3 +209,45 @@ body:not(.ready) .scroll{opacity:0}
     white-space: nowrap;
   }
 }
+
+@media screen and (max-width: 520px) {
+  .hc {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hc h1 {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: clamp(2rem, 10.5vw, 3.6rem);
+    letter-spacing: -0.055em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .glitch {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .glitch::before,
+  .glitch::after {
+    max-width: 100%;
+    white-space: nowrap;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  img,
+  canvas,
+  video {
+    max-width: 100%;
+  }
+}
