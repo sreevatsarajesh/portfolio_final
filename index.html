@@ -1,81 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Sreevatsa Rajesh – Security, ML & Full-Stack</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0a0a0b">
+<meta name="description" content="Sreevatsa Rajesh. Mathematics and Computing at Manipal Institute of Technology. Cybersecurity, machine learning, full-stack development.">
+<title>Sreevatsa Rajesh</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;800&family=Space+Grotesk:wght@300;400;500;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="bar"></div><canvas id="net"></canvas><div id="glow"></div>
-<nav><b>SR.</b><div><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#security">Security</a><a href="#contact">Contact</a></div></nav>
-<main>
-<header class="wrap hero">
-<div>
-<div class="role" id="role"></div>
-<h1><span id="n1">Sreevatsa</span><span class="l2" id="n2">Rajesh</span></h1>
-<p>Mathematics and Computing student at Manipal Institute of Technology. I build secure software, train deep learning models and ship full-stack apps.</p>
-<div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+<div id="load">
+  <div class="cur"></div>
+  <div class="lw mono">
+    <div class="lh"><span>MIT MANIPAL</span><span id="lp">000%</span></div>
+    <div class="lb"><i id="lbar"></i></div>
+    <div class="ls">booting.sreevatsa</div>
+  </div>
+  <div id="big" aria-hidden="true">000</div>
 </div>
-<div class="pic"><img src="assets/photo.jpg" alt="Portrait of Sreevatsa Rajesh"><span class="chip c1">YOLO</span><span class="chip c2">Metasploit</span><span class="chip c3">React</span></div>
+<div id="cd"></div><div id="cr"></div>
+<div id="sb"><div id="sbt"></div></div>
+<nav><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+
+<header id="hero">
+  <canvas id="hcv" aria-hidden="true"></canvas>
+  <div class="hp">
+  <div class="hc">
+    <div class="mono tag">▌ MIT MANIPAL ▐</div>
+    <h1 class="glitch" data-text="SREEVATSA">SREEVATSA</h1>
+    <h1 class="glitch" data-text="RAJESH">RAJESH</h1>
+    <div class="mono sub">Cybersecurity · Machine Learning · Full-Stack</div>
+  </div>
+  </div>
+  <div class="ticker mono"><div class="tk" id="tk"></div></div>
+  <div class="scroll mono">scroll<i></i></div>
 </header>
 
-<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+<main>
+<section id="about" class="wrap">
+  <div class="mono lab">About</div>
+  <p class="big r">I’m Sreevatsa, a Mathematics and Computing undergraduate at Manipal Institute of Technology, graduating in 2028. I work across cybersecurity, machine learning and full-stack development.</p>
+</section>
+<div class="mqs" data-dir="1" data-t="Cybersecurity|Machine Learning|Full-Stack"><div class="mqi"></div></div>
 
-<section id="about"><div class="wrap about">
-<div class="rv"><h2>Building at the edge of security and AI</h2>
-<p>I’m studying Mathematics and Computing at Manipal, with hands-on work in cybersecurity, machine learning and full-stack development.</p>
-<p>I’ve done academic research on model optimization under Prof. Ujjwal Verma, and spent six months developing web apps with an international team at SITER Academy in Norway.</p></div>
-<div class="stats rv">
-<div class="stat"><b data-c="6">0</b><span>months interning in Norway</span></div>
-<div class="stat"><b data-c="3">0</b><span>network security tools built</span></div>
-<div class="stat"><b data-c="91" data-s="%">0</b><span>in Class 12 (CBSE)</span></div>
-<div class="stat"><b data-c="2028">0</b><span>B.Tech graduation</span></div>
-</div></div></section>
+<section id="experience" class="wrap">
+  <div class="mono lab">Experience</div>
+  <article class="row r"><div class="meta mono"><span>Jul 2025 – Jan 2026</span><span>SITER Academy, Norway</span></div>
+    <div><h2>Full Stack Development Intern</h2><ul><li>Built responsive web applications with React and Node.js.</li><li>Worked with an international team using Git and Agile methods.</li><li>Improved UI performance and the user experience of core components.</li></ul></div></article>
+  <article class="row r"><div class="meta mono"><span>Ongoing</span><span>Manipal Institute of Technology</span></div>
+    <div><h2>Research Assistant, Machine Learning</h2><ul><li>Researched model optimization under Prof. Ujjwal Verma.</li><li>Designed and evaluated deep learning models in Python.</li><li>Ran literature reviews, controlled experiments and performance analysis.</li></ul></div></article>
+</section>
 
-<section id="skills"><div class="wrap"><h2 class="rv">Toolkit</h2>
-<div class="skills">
-<div class="card rv"><h3>Languages & frameworks</h3><div class="tags"><i>Python</i><i>JavaScript</i><i>React</i><i>React Native</i><i>Flutter</i><i>Node.js</i></div></div>
-<div class="card rv"><h3>Machine learning</h3><div class="tags"><i>YOLO</i><i>Deep learning</i><i>Model training</i><i>Evaluation</i></div></div>
-<div class="card rv"><h3>Cybersecurity & networking</h3><div class="tags"><i>Kali Linux</i><i>Metasploit</i><i>Wireshark</i><i>OSINT</i><i>Sockets</i><i>Traffic analysis</i></div></div>
-<div class="card rv"><h3>Developer tools</h3><div class="tags"><i>Git</i><i>GitHub</i><i>Agile</i></div></div>
-</div></div></section>
+<section id="skills" class="wrap">
+  <div class="mono lab">Skills</div>
+  <div class="sk r"><h3 class="mono">Languages & frameworks</h3><p>Python, JavaScript, React, React Native, Flutter, Node.js</p></div>
+  <div class="sk r"><h3 class="mono">Machine learning</h3><p>YOLO, deep learning models, model training and evaluation</p></div>
+  <div class="sk r"><h3 class="mono">Cybersecurity & networking</h3><p>Kali Linux, Metasploit, Wireshark, OSINT, socket programming, network traffic analysis</p></div>
+  <div class="sk r"><h3 class="mono">Tools</h3><p>Git, GitHub</p></div>
+</section>
+<div class="mqs" data-dir="-1" data-t="Python|React|Node.js|YOLO|Kali Linux"><div class="mqi"></div></div>
 
-<section id="work"><div class="wrap"><h2 class="rv">Experience</h2>
-<div class="tl" id="tl"><div id="tlp"></div>
-<div class="job rv"><h3>Full Stack Development Intern</h3><div class="meta">SITER Academy, Norway · July 2025 – January 2026</div>
-<ul><li>Built responsive web applications with React and Node.js.</li><li>Worked with an international team using Git and Agile methods.</li><li>Improved UI performance and the user experience of core components.</li></ul></div>
-<div class="job rv"><h3>Research Assistant, Machine Learning</h3><div class="meta">Manipal Institute of Technology · Prof. Ujjwal Verma</div>
-<ul><li>Researched machine learning model optimization under faculty supervision.</li><li>Designed and evaluated deep learning models in Python.</li><li>Ran literature reviews, controlled experiments and performance analysis.</li></ul></div>
-</div></div></section>
+<section id="projects" class="wrap">
+  <div class="mono lab">Projects</div>
+  <a class="proj r" href="https://github.com/sreevatsarajesh/Codebase_XRay" target="_blank" rel="noopener noreferrer"><div><h2>Codebase X-Ray ↗</h2><p>Turns unfamiliar Python repositories into interactive architecture maps. Scans source structure and import relationships, then visualizes dependencies so developers can explore how a codebase fits together.</p></div><div class="mono st">Python / FastAPI / React / React Flow / AST</div></a>
+  <a class="proj r" href="https://github.com/sreevatsarajesh/attackpath" target="_blank" rel="noopener noreferrer"><div><h2>AttackPath ↗</h2><p>A cybersecurity analysis platform for discovering exposed network services, organizing assets, mapping potential vulnerabilities, and visualizing relationships in an attack graph.</p></div><div class="mono st">Python / FastAPI / Nmap / SQLite / NVD</div></a>
+  <a class="proj r" href="https://github.com/sreevatsarajesh/cybersecuritylabs" target="_blank" rel="noopener noreferrer"><div><h2>CyberSecurityLabs ↗</h2><p>A hands-on cybersecurity lab documenting tools built from scratch and practical learning in network security, Python security tooling, Linux, and security challenges.</p></div><div class="mono st">Python / Linux / TCP-IP / Socket Programming</div></a>
+</section>
 
-<section id="projects"><div class="wrap"><h2 class="rv">Projects</h2>
-<div class="projs">
-<div class="card proj rv"><div><h3>YOLO Object Detection</h3><p>Real-time object detection built on the YOLO architecture in Python.</p></div><div class="tags"><i>Python</i><i>YOLO</i><i>Deep learning</i></div></div>
-<div class="card proj rv"><div><h3>Assignment Solving Platform</h3><p>A full-stack web app that streamlines class assignments and submissions.</p></div><div class="tags"><i>React</i><i>Node.js</i><i>Full stack</i></div></div>
-<div class="card proj rv"><div><h3>Cybersecurity Toolkit</h3><p>A multithreaded port scanner, a banner grabber and a live packet sniffer. See them run below.</p></div><div class="tags"><i>Python</i><i>Sockets</i><i>Networking</i></div></div>
-</div></div></section>
+<section id="education" class="wrap">
+  <div class="mono lab">Education</div>
+  <div class="edu">
+    <article class="ec main r"><div class="mono et">Undergraduate</div><h2>B.Tech, Mathematics and Computing</h2><p>Manipal Institute of Technology, Manipal</p><div class="mono chip">2024 – 2028</div></article>
+    <article class="ec r"><div class="mono et">Senior secondary</div><h2>Class 12 (CBSE)</h2><p>Indian School Al Ghubra, Muscat, Oman</p></article>
+    <article class="ec r"><div class="mono et">Secondary</div><h2>Class 10 (CBSE)</h2><p>Indian School Al Maabela, Muscat, Oman</p></article>
+  </div>
+</section>
+<div class="mqs" data-dir="1" data-t="Let’s build something"><div class="mqi"></div></div>
 
-<section id="security"><div class="wrap"><h2 class="rv">The security toolkit, running</h2>
-<div class="term rv"><div class="tb"><i></i><i></i><i></i></div><pre id="term" aria-label="Animated demo of the port scanner, banner grabber and packet sniffer"></pre></div></div></section>
-
-<section id="edu"><div class="wrap"><h2 class="rv">Education</h2>
-<div class="edu">
-<div class="card rv"><b>2024 – 2028</b><h3>B.Tech, Mathematics and Computing</h3><p>Manipal Institute of Technology, Manipal</p></div>
-<div class="card rv"><b>2023 – 2024 · 91%</b><h3>Class 12 (CBSE)</h3><p>Indian School Al Ghubra, Muscat, Oman</p></div>
-<div class="card rv"><b>2022 · 88%</b><h3>Class 10 (CBSE)</h3><p>Indian School Al Maabela, Muscat, Oman</p></div>
-</div></div></section>
-
-<section class="contact" id="contact"><div class="wrap">
-<h2 class="rv">Let’s build something.</h2>
-<p class="rv">Open to internships, research collaborations and security or ML projects.</p>
-<div class="btns rv" style="justify-content:center"><a class="btn p" href="mailto:">Email me</a><a class="btn" href="#">GitHub</a><a class="btn" href="#">LinkedIn</a></div>
-</div></section>
+<section id="contact" class="wrap">
+  <div class="mono lab">Contact</div>
+  <a class="cl r" href="https://github.com/sreevatsarajesh" target="_blank" rel="noopener noreferrer">GitHub</a>
+  <a class="cl r" href="https://www.linkedin.com/in/sreevatsa-rajesh-9118bb340/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  <a class="cl r" href="mailto:sreevatsarajesh@gmail.com">Email</a>
+</section>
 </main>
-<footer>© 2026 Sreevatsa Rajesh</footer>
-
+<footer class="mono">© 2026 Sreevatsa Rajesh</footer>
 <script src="script.js"></script>
 </body>
 </html>
