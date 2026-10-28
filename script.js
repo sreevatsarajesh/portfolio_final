@@ -36,9 +36,15 @@ sb.addEventListener('mousedown',function(e){if(e.target!==sb)return;var m=sbm();
 var tg=scrollY,cur=scrollY,smooth=!rm&&matchMedia('(hover:hover)').matches;
 function mxs(){return de.scrollHeight-innerHeight}
 function goTo(y){y=Math.max(0,Math.min(mxs(),y));if(smooth)tg=y;else scrollTo(0,y)}
-if(smooth){addEventListener('wheel',function(e){if(e.ctrlKey||!document.body.classList.contains('ready'))return;e.preventDefault();tg=Math.max(0,Math.min(mxs(),tg+e.deltaY*(e.deltaMode==1?34:1)))},{passive:false});
+if(smooth){addEventListener('wheel',function(e){if(e.ctrlKey||!document.body.classList.contains('ready'))return;if(Math.abs(e.deltaX)>Math.abs(e.deltaY)&&e.target.closest&&e.target.closest('.trk'))return;e.preventDefault();tg=Math.max(0,Math.min(mxs(),tg+e.deltaY*(e.deltaMode==1?34:1)))},{passive:false});
 addEventListener('scroll',function(){if(Math.abs(scrollY-cur)>2){cur=tg=scrollY}},{passive:true})}
 document.querySelectorAll('nav a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var el=$(a.getAttribute('href'));if(!el)return;e.preventDefault();goTo(el.getBoundingClientRect().top+scrollY)})});
+
+// skills track: drag to scroll
+document.querySelectorAll('.trk').forEach(function(t){var d=0,sx=0,sl=0,mv=0;
+t.addEventListener('mousedown',function(e){d=1;mv=0;sx=e.clientX;sl=t.scrollLeft});
+addEventListener('mousemove',function(e){if(!d)return;var dx=e.clientX-sx;if(Math.abs(dx)>3){mv=1;t.classList.add('dg')}t.scrollLeft=sl-dx});
+addEventListener('mouseup',function(){d=0;t.classList.remove('dg')})});
 var mqs=[].slice.call(document.querySelectorAll('.mqs')).map(function(m){var it=m.dataset.t.split('|'),s=it.map(function(t){return t+' <em>/</em> '}).join('');s=s+s;var i=m.firstChild;i.innerHTML=s+s;return{m:m,i:i,d:+m.dataset.dir}});
 var cv=$('#hcv'),cx=cv.getContext('2d'),hp=$('.hp'),W,H,dp=Math.min(devicePixelRatio||1,2),SY=['$','%','∑','∆','π','λ','∞','01','10','{ }','</>','0x','::','&&'],P=[],mx=0,my=0,smx=0,smy=0;
 function rs(){W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dp;cv.height=H*dp;cx.setTransform(dp,0,0,dp,0,0);P=[];for(var i=0;i<(W<700?26:60);i++)P.push({x:Math.random()*W,y:Math.random()*H,v:.12+Math.random()*.35,s:Math.random()*6.28,d:.3+Math.random()*1.2,c:SY[Math.random()*SY.length|0],a:.1+Math.random()*.25,r:Math.random()<.14})}
